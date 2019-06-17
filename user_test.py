@@ -24,5 +24,5 @@ class TestUser(unittest.TestCase):
         """
         self.assertTrue(User.user_exists)
 
-    if __name__ == "__main__":
-        unittest.main()        
+if __name__ == "__main__":
+    unittest.main()        

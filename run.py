@@ -62,15 +62,15 @@ def main():
     """
 
     print("\n")
-    print("|`````\   /````\   /``````\   /``````\  |`|          |`|  /``````\  |``````\   |`````\     |`|      /``````\    /```````\  |`| /`/  |``````|  |``````\      ")
-    print("| |``| | | /``\ | | |````\ | | |````\ | | |          | | | /````\ | | |```| |  | |``\ |    | |     | /````\ |  |  /````\|  | |/ /   | |`````  | |```| |     ")
-    print("| |```/  | |  | |  \  ````\   \  ````\   \ \  /``\  / /  | |    | | | |``` /   | |  | |    | |     | |    | |  | |         | | |    | `````|  | |``` /      ")
-    print("| |```   | |``| |   `````| |   `````| |   \ \/ /\ \/ /   | \    / | | |````\   | |  / |    | |     | \    / |  |  \    /|  | |\ \   | |`````  | |````\      ")
-    print("| |      | |``| |  \````` /   \````` /     \  /  \  /     \ ```` /  | |```\ \  | ``` /     |  ```|  \ ```` /    \  ```` /  | | \ \  | `````|  | |```\ \     ")
-    print("```      ```  ```   ``````     ``````       ```   ```      ``````   ```    ``` ``````      ```````   ``````      ``````    ```  ``` ````````  ```    ```    \n")
+    print("|`````\   /````\   /``````\   /``````\  |`|          |`|  /``````\  |``````\   |`````\      |`|      /``````\    /```````\  |`| /`/  |``````|  |``````\    ")
+    print("| |``| | | /``\ | | |````\ | | |````\ | | |          | | | /````\ | | |```| |  | |``\ |     | |     | /````\ |  |  /````\|  | |/ /   | |`````  | |```| |   ")
+    print("| |```/  | |  | |  \  ````\   \  ````\   \ \  /``\  / /  | |    | | | |``` /   | |  | |     | |     | |    | |  | |         | | |    | `````|  | |``` /    ")
+    print("| |```   | |``| |   `````| |   `````| |   \ \/ /\ \/ /   | \    / | | |````\   | |  / |     | |     | \    / |  |  \    /|  | |\ \   | |`````  | |````\    ")
+    print("| |      | |``| |  \````` /   \````` /     \  /  \  /     \ ```` /  | |```\ \  | ``` /      |  ```|  \ ```` /    \  ```` /  | | \ \  | `````|  | |```\ \   ")
+    print("```      ```  ```   ``````     ``````       ```   ```      ``````   ```    ``` ``````       ```````   ``````      ``````    ```  ``` ````````  ```    ```  \n")
  
 
-    print("This app was developed by Danmark Mutai\n")
+    print("This app was developed by *Danmark Mutai*\n")
     print("Welcome to PASSWORD LOCKER. We help you manage your passwords so that you can worry about things that matter\n")
     print("-"*6,"SIGN UP","-"*6,"\n")
 
@@ -88,19 +88,19 @@ def main():
         if command == "add":
             print("Oh cool. Enter your new passwords\n")
             acc = input("Which platform is the password for?\n")
-            u_name = input("What is your username?\n")
+            user_name = input("What is your username?\n")
             password = getpass.getpass("What is your password?\n")
 
-            add_password(acc,u_name,password)
+            add_password(acc,user_name,password)
 
             print(f"New password for {acc} added\n")
         elif command == "generate":
             print("I like generating password for you!")
             acc = input("Which platform is the password for?\n")
-            u_name = input("What is your username?\n")
+            user_name = input("What is your username?\n")
             length = input("What is the length of the password you would like me to generate, please enter any number\n")
             try:
-                add_password(acc,u_name,generate_password(int(length)))
+                add_password(acc,user_name,generate_password(int(length)))
                 print(f"New password for {acc} generated\n")
             except ValueError:
                 print("Please use numbers only\n")
@@ -135,4 +135,4 @@ def main():
             break
 
 if __name__ == "__main__":
-     main()
+    main()

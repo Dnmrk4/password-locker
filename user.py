@@ -12,8 +12,8 @@ class User:
     def user_exist(self,password):
       """
       This will use the password to authenticate the user before showing the passwords
-      Args: the user password
-      return: boolean
+      Args:the user password
+      return:boolean
       """
       if self.password == password:
           return True
