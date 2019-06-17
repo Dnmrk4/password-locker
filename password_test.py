@@ -70,4 +70,5 @@ class TestPassword(unittest.TestCase):
         self.new_password.save_password()
         self.assertTrue(Password.password_exist("instagram"))
 
-    
+    if __name__ == "__main__":
+        unittest.main()
