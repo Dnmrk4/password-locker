@@ -78,7 +78,7 @@ def main():
 
     #new_user(login,password)
 
-    print("Welcome {user_name}\n")
+    print(f"Welcome {user_name}\n")
 
     print("What would you like to do?\n")
 
@@ -121,9 +121,9 @@ def main():
                 if view_passwords():
                     for password in view_passwords():
                         print("-"*6,view_passwords().index(password)+1,"-"*6,"\n")
-                        print("Account --> {password.account}\n")
-                        print("Username --> {password.username}\n")
-                        print("Password --> {password.password}\n")
+                        print(f"Account --> {password.account}\n")
+                        print(f"Username --> {password.username}\n")
+                        print(f"Password --> {password.password}\n")
                 else:
                     print("You have no passwords\n")
             else:
