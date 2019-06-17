@@ -1,8 +1,8 @@
 # PASSWORD LOCKER
 
-## Author
+### Author
 
-#### Danmark Mutai
+#### - Danmark Mutai
 
 ## Description
 
@@ -17,10 +17,10 @@ This app enables the user to create passwords, generate passwords and save their
 1. When the user enters the application he/she will be prompted to enter their name and a password that they will use to access private information.
 
 2. The user will have a choice of:
-##### a. Adding an existing password.
-##### b. Generating a new password.
-##### c. Viewing their saved passwords.
-##### d. Deleting their saved passwords.
+    a. Adding an existing password.
+    b. Generating a new password.
+    c. Viewing their saved passwords.
+    d. Deleting their saved passwords.
 
 3. When the user chooses the add option he/she will be prompted to provide their account credential; the email, the username and the password.
 
