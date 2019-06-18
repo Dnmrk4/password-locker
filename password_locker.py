@@ -5,7 +5,7 @@ class Password:
     """
     Here is where we will use to create the paswords
     """
-    password_list = []  # list to store user  passwords
+    db = []  # list to store user  passwords
 
     def __init__(self, account, username, password):
         """
@@ -14,27 +14,28 @@ class Password:
         self.account = account
         self.username = username
         self.password = password
-        self.password_locker = []
+        
     
 
     @classmethod
     def generate_pass(cls, length):
-        return 'abcd'
+        return 'ab4c0d'
 
 
     def save_password(self):
         """
         This function will add users password to the password array
         """
-        self.password_locker.append(self)
+        Password.db.append(self)
  
 
     @classmethod
-    def display_passwords(cls):
+    def view_passwords(cls):
         """
         This function returns all passwords on the list
         """
-        return cls.password_list
+        return cls.db
+
 
     @classmethod
     def delete_password(cls, account):
@@ -43,9 +44,9 @@ class Password:
         Args:
              This is the account of the password the user wants to delete
         """
-        for password in cls.password:
+        for password in cls.db:
             if password.account.lower() == account.lower():
-                cls.password_list.remove(password)
+                cls.db.remove(password)
 
     @classmethod
     def password_exist(cls, account):
@@ -56,7 +57,7 @@ class Password:
         return:
                True or False
         """
-        for password in cls.password_list:
+        for password in cls.db:
             if password.account.lower() == account.lower():
                 return True
                 return False

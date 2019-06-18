@@ -36,7 +36,7 @@ def view_passwords():
     """
     A function that will allow the user to view all the passwords
     """
-    return Password.display_passwords()
+    return Password.view_passwords()
 
 def delete_password(acc):
     """
@@ -110,8 +110,9 @@ def main():
             if pass_word == user_pass:
                 acc= input("Which account would you like to delete their password?\n")
                 if password_exists(acc):
-                    delete_password(acc)
                     print(f"{acc} password deleted\n")
+                    if delete_password(acc):
+                       print(f"{acc} password deleted\n")      
                 else:
                     print("Password doesn't exist\n")
             else:
