@@ -1,5 +1,5 @@
 from random import random
-
+from string import _string
 
 class Password:
     """
@@ -19,7 +19,7 @@ class Password:
 
     @classmethod
     def generate_pass(cls, length):
-        return 'ab4c0d'
+        return 'ue9r4o3e'
 
 
     def save_password(self):

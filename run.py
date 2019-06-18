@@ -84,8 +84,8 @@ def main():
     print("What would you like to do?\n")
 
     while True:
-        command = input("You can use 'generate' to  generate a password, 'add' to add an existing password, 'del' to delete a password, 'view' to view all your passwords, 'exit' to leave :( \n")
-        if command == "add":
+        command = input("You can use 'gg' to  generate a password, 'aa' to add an existing password, 'dd' to delete a password, 'vv' to view all your passwords, 'exit' to leave :( \n")
+        if command == "aa":
             print("Oh cool. Enter your new passwords\n")
             acc = input("Which platform is the password for?\n")
             user_name = input("What is your username?\n")
@@ -94,7 +94,7 @@ def main():
             add_password(acc,user_name,password)
 
             print(f"New password for {acc} added\n")
-        elif command == "generate":
+        elif command == "gg":
             print("I like generating password for you!")
             acc = input("Which platform is the password for?\n")
             user_name = input("What is your username?\n")
@@ -104,7 +104,7 @@ def main():
                 print(f"New password for {acc} generated\n")
             except ValueError:
                 print("Please use numbers only\n")
-        elif command == "del":
+        elif command == "dd":
             print("Oh no!:(\n")
             pass_word = getpass.getpass("Enter your password?\n")
             if pass_word == user_pass:
@@ -117,7 +117,7 @@ def main():
                     print("Password doesn't exist\n")
             else:
                 print("\nOh no. Wrong password. Try Again\n")
-        elif command == "view":
+        elif command == "vv":
             pass_word = getpass.getpass("Enter your password?\n")
             if pass_word == user_pass:
                 if view_passwords():
