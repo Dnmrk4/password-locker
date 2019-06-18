@@ -32,13 +32,13 @@ class TestPassword(unittest.TestCase):
         Here it will check weather the new password is added in the list
         """
         self.new_password.save_password()
-        self.assertEquall(len(Password.paswords), 1)
+        self.assertEquall(len(Password.paswords), 8)
 
     def test_add_generate_password(self):
         """
         This will check if the new password added to the list
         """
-        new_password = Password("facebook", "6980", Password.generate_(6))
+        new_password = Password("facebook", "6980", Password.generate_(8))
         new_password.save_password()
         self.assertEquall(len(Password.password))
 

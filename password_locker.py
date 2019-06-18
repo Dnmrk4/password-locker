@@ -7,19 +7,27 @@ class Password:
     """
     password_list = []  # list to store user  passwords
 
-    def _init_(self, account, username, password):
+    def __init__(self, account, username, password):
         """
         This function will allow the user to create instances of the class with unique details in each instance
         """
         self.account = account
         self.username = username
         self.password = password
+        self.password_locker = []
+    
+
+    @classmethod
+    def generate_pass(cls, length):
+        return 'abcd'
+
 
     def save_password(self):
         """
         This function will add users password to the password array
         """
-        password.password_locker.append(self)
+        self.password_locker.append(self)
+ 
 
     @classmethod
     def display_passwords(cls):
@@ -51,5 +59,4 @@ class Password:
         for password in cls.password_list:
             if password.account.lower() == account.lower():
                 return True
-
                 return False

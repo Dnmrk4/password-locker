@@ -20,7 +20,7 @@ def add_password(account,username,password):
     This is a function that will add a new password to the passwords list
     """
     new_pass = Password(account,username,password)
-    new_pass.save_pass()
+    new_pass.save_password()
 
 def generate_password(length):
     """
